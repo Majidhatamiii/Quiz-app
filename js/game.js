@@ -3,14 +3,12 @@ import formatData from "./helper.js";
 const loader = document.getElementById("loader");
 const container = document.getElementById("container");
 const questionText = document.getElementById("question-txt");
-
 const answerList = document.querySelectorAll(".answer-txt");
 const URL =
   "https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple";
-
 let formattedData = null;
-let questionIndex = 0;
 let correctAnswer = null;
+let questionIndex = 0;
 
 const fetchData = async () => {
   const response = await fetch(URL);
@@ -34,9 +32,18 @@ const showQuestion = () => {
     button.innerText = answers[index];
   });
 };
-const checkAnswer = () => {};
+
+const checkAnswer = (event, index) => {
+  const isCorrect = index === correctAnswer ? true : false;
+  if (isCorrect) {
+    event.target.classList.add("correct");
+  } else {
+    event.target.classList.add("incorrect");
+    answerList[correctAnswer].classList.add("correct");
+  }
+};
 
 window.addEventListener("load", fetchData);
 answerList.forEach((button, index) => {
-  button.addEventListener("click", checkAnswer);
+  button.addEventListener("click", (event) => checkAnswer(event, index));
 });

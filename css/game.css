@@ -8,18 +8,6 @@
   display: inline-block;
   animation: rotation 1.5s linear infinite;
 }
-#box {
-  width: 1000px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
-  align-items: center;
-  border-radius: 45px;
-  margin-top: -50px;
-  background: linear-gradient(145deg, #c2bcf0, #eeedfb);
-  box-shadow: 12px 12px 28px #989898, -12px -12px 28px #5d5c5c;
-}
 
 #container {
   display: none;

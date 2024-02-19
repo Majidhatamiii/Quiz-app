@@ -15,7 +15,7 @@ body {
   padding-top: 100px;
 }
 #box {
-  width: 1000px;
+  width: fit-content;
   height: auto;
   display: flex;
   flex-direction: column;

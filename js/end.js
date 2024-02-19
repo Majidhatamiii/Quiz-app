@@ -18,7 +18,7 @@ const saveHandler = () => {
     hightScore.sort((a, b) => b.score - a.Score);
     hightScore.splice(10);
     localStorage.setItem("hightScore", JSON.stringify(hightScore));
-    localStorage.removeItem("score");
+    localStorage.removeItem("scores");
     window.location.assign("./index.html");
   }
 };

@@ -19,7 +19,9 @@ a {
   color: #6757d9;
   text-decoration: none;
   border-radius: 20px;
-  transition: all 0.2 ease-in;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
 }
 
 a:hover {
